@@ -49,4 +49,10 @@ class User < ApplicationRecord
     return user if user.password_hash == hashed_password
     nil
   end
+
+  before_validation :make_downcase
+
+  def make_downcase
+    username.downcase!
+  end
 end
