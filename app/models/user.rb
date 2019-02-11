@@ -53,6 +53,6 @@ class User < ApplicationRecord
   before_validation :make_downcase
 
   def make_downcase
-    username.downcase!
+    self.username = username.downcase unless self.present?
   end
 end
