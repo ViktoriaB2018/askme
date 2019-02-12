@@ -14,6 +14,8 @@ class User < ApplicationRecord
   validates :email, 'valid_email_2/email': true
 
   attr_accessor :password
+
+  before_validation :make_downcase
   before_save :encrypt_password
 
   validates_presence_of :password, on: :create
@@ -49,8 +51,6 @@ class User < ApplicationRecord
     return user if user.password_hash == hashed_password
     nil
   end
-
-  before_validation :make_downcase
 
   def make_downcase
     self.username = username.downcase unless username.blank?
