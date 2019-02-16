@@ -7,7 +7,7 @@ module ApplicationHelper
     end
   end
 
-  def puts_count(number)
+  def human_number_amount(number)
     if number == 0
       'Пока еще нет'
     else
