@@ -7,14 +7,6 @@ module ApplicationHelper
     end
   end
 
-  def human_number_amount(number)
-    if number == 0
-      'Пока еще нет'
-    else
-      "Всего #{number}"
-    end
-  end
-
   def sklonenie(number, vopros, voprosa, voprosov)
     ostatok = number % 100
 
