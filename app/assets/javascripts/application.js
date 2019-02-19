@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.simplecolorpicker.js
 //= require_tree .
 
 $(function(){
@@ -20,3 +21,7 @@ $(function(){
         return false;
     });
 });
+
+$(function () {
+    $('#bg_color').simplecolorpicker();
+})
