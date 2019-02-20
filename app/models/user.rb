@@ -12,6 +12,7 @@ class User < ApplicationRecord
   validates :username, length: { maximum: 40 }
   validates :username, format: { with: /\A[\w]+\z/ }
   validates :email, 'valid_email_2/email': true
+  validates :avatar_url, format: { with: URI::regexp(%w(http https)) }, on: :update, allow_blank: true
 
   attr_accessor :password
 
