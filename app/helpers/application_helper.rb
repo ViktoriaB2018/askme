@@ -27,6 +27,7 @@ module ApplicationHelper
 
   def background_colors
     [
+        ['Зеленый(стандартный)', '#005a55'],
         ['Зеленый', '#7bd148'],
         ['Синий', '#5484ed'],
         ['Голубой', '#a4bdfc'],
