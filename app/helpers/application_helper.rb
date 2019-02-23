@@ -25,6 +25,14 @@ module ApplicationHelper
     content_tag 'span', '', class: "fa fa-#{icon_class}"
   end
 
+  def author_name(question)
+    if question.author.present?
+       link_to question.author.username, user_path(question.author)
+    else
+      'Аноним'
+    end
+  end
+
   def background_colors
     [
         ['Зеленый(стандартный)', '#005a55'],
@@ -45,4 +53,5 @@ module ApplicationHelper
         ['Черный', '#000']
     ]
   end
+
 end
