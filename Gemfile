@@ -24,4 +24,3 @@ end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'valid_email2'
-gem 'jquery-simplecolorpicker-rails'
