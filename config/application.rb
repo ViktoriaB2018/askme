@@ -30,6 +30,8 @@ module Askme
     # Don't generate system test files.
     config.generators.system_tests = nil
 
+    config.assets.initialize_on_precompile = false
+
     config.time_zone = 'Moscow'
 
     config.i18n.default_locale = :en
