@@ -1,11 +1,25 @@
 # ASKME
 
-## Site with questions & answers
+## Social network with questions & answers
 
 * Ruby version 2.5.3
-
 * Rails version 5.2.2
+* Deploy Heroku - https://ask-ask-me.herokuapp.com/
 
-* Database creation - `rake db:migrate`
+#### Before running
 
-* Deploy - Heroku
+```
+bundle install
+bundle exec rake db:migrate
+```
+
+#### For production and development environments
+
+You need set up variable environments
+
+Recaptcha (app/config/initializers/recaptcha.rb):
+
+```
+RECAPTCHA_SITE_KEY
+RECAPTCHA_SECRET_KEY
+```
